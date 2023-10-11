@@ -7,17 +7,20 @@
         <link href="../../css/prism.css" rel="stylesheet" />
         <script src="../../scripts/prism.js"></script>
     </head>
-        <body>
-            <nav id="navbar-guide">
-                <ul>
-                  <li><a href="../../index.html">Home</a></li>
-                </ul>
-              </nav>  
+    <body>
+        <nav id="navbar">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a class="unselectable hidden-hover" hover.>About</a></li>
+              <li><a class="unselectable hidden-hover" hover.>Contact</a></li>
+              <li><a class="unselectable hidden-hover" hover.>Guides</a></li>
+            </ul>
+          </nav>  
                 <div class="container">
                 <!-- Initialize  -->
                 <script>Prism.highlightAll(); </script>
                 <!-- Page title -->
-                <h1>Creating an x86 disk images from scratch</h1>
+                <h1 style="padding-top:5%">Creating an x86 disk images from scratch</h1>
                 <!-- Page body -->
                 <p>This tutorial follows gem5's utility script to setup an x86 disk image for full system mode running Ubuntu 18.04.6 LTS. All the steps were tested using Ubuntu 20.04.06 LTS running on x86 hardware. </p>
                 
