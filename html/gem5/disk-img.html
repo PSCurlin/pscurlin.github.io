@@ -20,7 +20,7 @@
                 <!-- Initialize  -->
                 <script>Prism.highlightAll(); </script>
                 <!-- Page title -->
-                <h1 style="padding-top:5%">Creating an x86 disk images from scratch</h1>
+                <h1 style="padding-top:5%">Creating an x86 disk image from scratch</h1>
                 <!-- Page body -->
                 <p>This tutorial follows gem5's utility script to setup an x86 disk image for full system mode running Ubuntu 18.04.6 LTS. All the steps were tested using Ubuntu 20.04.06 LTS running on x86 hardware. </p>
                 
@@ -108,7 +108,7 @@ sync
 sleep 10
 /sbin/m5 exit
 fi
-        echo "No script found"</code></pre>    
+echo "No script found"</code></pre>    
 
                 <!-- chroot: exit -->
                 <h3> Exiting and unmounting</h2>
@@ -118,7 +118,7 @@ fi
                 <pre><code class="language-bash">sudo /bin/umount mnt/sys
 sudo /bin/umount mnt/proc
 sudo /bin/umount mnt/dev
-        sudo umount mnt</code></pre>
+sudo umount mnt</code></pre>
 
                 <!-- Linux kernels -->
                 <h2>Linux kernel</h2>
@@ -182,7 +182,7 @@ Exiting @ tick 3355855059000 because m5_exit instruction encountered</pre>
                 <li> <a href="https://gem5.googlesource.com/public/gem5/+/master/RELEASE-NOTES.md"> gem5: Release notes</a> </li>
                 <li> <a href="https://ubuntu.com/security/livepatch/docs/livepatch/reference/kernels"> Ubuntu: Supported kernels for livepatching </a> </li>
                 </ul>
-                <p><i>Last modified: <span id="last-modified"></span></i></p>
-        </div>
+                <p>Last modified: <i><span id="last-modified"></span></i></p>
+            </div>
     </body>
 </html>
