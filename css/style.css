@@ -14,7 +14,6 @@ body {
   margin: 0;
 } 
 
-
 nav {
   margin-top: 2%;
   color: white;
@@ -47,7 +46,7 @@ nav a:hover {
 .container {
   /* margin: 0 10%; */
   /* width: auto; */
-  margin: 0 20%;
+  margin: 0 20% 0 20%;
 }
 
 
