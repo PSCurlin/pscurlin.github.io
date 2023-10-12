@@ -160,3 +160,18 @@ flex-container {
   border-radius: 50%;
   transition: transform 0.3s ease-in-out;
 }
+
+.project {
+  display: flex;
+  align-items: center;
+}
+
+img {
+  width: 25%;
+  height: auto;
+  margin-right: 25px;
+}
+
+.text-container {
+  width: 75%;
+}
