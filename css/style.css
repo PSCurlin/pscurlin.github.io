@@ -152,10 +152,9 @@ flex-container {
 }
 
 .social-media img {
-  width: 40px;
+  width: auto;
   height: 40px;
-  border-radius: 50%;
-  transition: transform 0.3s ease-in-out;
+  padding-right: 15px;
 }
 
 .project {
@@ -174,4 +173,16 @@ img {
   grid-template-columns: 0.75fr 2fr;
   column-gap: 20px;
   align-items: center;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 0.75fr 2fr;
+  column-gap: 20px;
+  align-items: center;
+}
+
+.about-image {
+  max-width: auto;
+  max-height: 100%;
 }
