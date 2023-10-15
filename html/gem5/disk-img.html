@@ -44,7 +44,7 @@
 wget http://cdimage.ubuntu.com/ubuntu-base/releases/18.04/release/ubuntu-base-18.04.5-base-amd64.tar.gz</code></pre>
                 <p>Next, copy the root files into the mounted directory.</p>
                 <pre><code class="language-bash">sudo tar xzvf ubuntu-base-18.04.5-base-amd64.tar.gz -C mnt</code></pre>
-                <p>Finally copy your configuration file from your system into the mounted disk image to be able to use chroot.</p>
+                <p>Finally copy your configuration file from your system into the mounted disk image to be able to use <code>chroot</code>.</p>
                 <pre><code class="language-bash">sudo cp /etc/resolv.conf mnt/etc/</code></pre>
 
                 <!-- chroot -->
@@ -55,7 +55,7 @@ wget http://cdimage.ubuntu.com/ubuntu-base/releases/18.04/release/ubuntu-base-18
                 <pre><code class="language-bash">sudo /bin/mount -o bind /sys mnt/sys
 sudo /bin/mount -o bind /dev mnt/dev
 sudo /bin/mount -o bind /proc mnt/proc</code></pre>
-                <p>Finally, to chroot use the following command:</p>
+                <p>Finally, to <code>chroot</code>, use the following command:</p>
                 <pre><code class="language-bash">sudo /usr/sbin/chroot mnt /bin/bash</code></pre>
                 <!-- chroot: installing packages -->
                 <h3> Installing packages on the disk image</h2>
@@ -112,7 +112,7 @@ echo "No script found"</code></pre>
 
                 <!-- chroot: exit -->
                 <h3> Exiting and unmounting</h2>
-                <p>To leave the chroot, simply exit. This will take you back to your host machine's <code>m5_binaries</code> directory:</p>
+                <p>To leave the <code>chroot</code>, simply <code>exit</code>. This will take you back to your host machine's <code>m5_binaries</code> directory:</p>
                 <pre><code class="language-bash">exit</code></pre>
                 <p>You will also need to unbind the directories before unmounting the disk.</p>
                 <pre><code class="language-bash">sudo /bin/umount mnt/sys
