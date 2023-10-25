@@ -60,7 +60,7 @@ sudo /bin/mount -o bind /proc mnt/proc</code></pre>
                 <!-- chroot: installing packages -->
                 <h3> Installing packages on the disk image</h2>
                 <p>Now that we are in the root directory of the disk image, we can update and install some packages.</p>
-                <pre><code class="language-bash">apt-get install software-properties-common -y; add-apt-repository universe; apt-get update</code></pre>
+                <pre><code class="language-bash">apt-get update; apt-get install software-properties-common -y; add-apt-repository universe;</code></pre>
                 <p>The following command is not required, but I have included also some useful packages to install (either for benchmarks or for building your own kernel within the disk image).</p>
                 <pre><code class="language-bash">apt-get install gcc g++ systemd linux-generic make wget -y</code></pre>
                 <!-- chroot: gem5 files on disk image -->
