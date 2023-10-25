@@ -27,10 +27,10 @@
                 <!-- Creating an empty disk -->
                 <h2>Create the empty disk with the gem5 utility</h2>
                 <p>For the sake of simplicity, <code>cd</code> to your gem5 directory. Then create a directory where you will work on creating the disk image:</p>
-                <pre><code class="language-bash">mkdir ../m5_binaries; mkdir ../m5_binaries/mnt; mkdir ../m5_binaries/disks; mkdir ../m5_binaries/binaries</code></pre>
+                <pre><code class="language-bash">mkdir m5_binaries; mkdir m5_binaries/mnt; mkdir m5_binaries/disks; mkdir m5_binaries/binaries</code></pre>
 
                 <p>Next, from the gem5 source directory, we will create an empty disk image using the gem5 utility script. You can set the size of the image as needed for your application:</p>
-                <pre><code class="language-bash">util/gem5img.py init ubuntu-18.04-amd64.img 8192; mv ubuntu-18.04-amd64.img ../m5_binaries/disks/</code></pre>
+                <pre><code class="language-bash">util/gem5img.py init m5_binaries/disks/ubuntu-18.04-amd64.img 8192</code></pre>
                 <p><i>Note:</i> if you get an error from the <code>gem5img.py</code> stating <code>TypeError: 'float' object cannot be interpreted as an integer</code>, then all you have to do is 
                 go to line 361 within <code>gem5img.py</code> where it indicates <code>os.lseek(fd, size - 1, os.SEEK_SET)</code> and change it to <code>os.lseek(fd, int(size) - 1, os.SEEK_SET)</code>.</p>
                 <p></p>
@@ -38,9 +38,9 @@
                 <!-- Mounting the disk and adding the root files -->
                 <h2>Mounting the disk and adding the root files</h2>
                 <p>Now that the empty disk has been created, you will need to mount it.</p>
-                <pre><code class="language-bash">util/gem5img.py mount ../m5_binaries/disks/ubuntu-18.04-amd64.img ../m5_binaries/mnt</code></pre>
+                <pre><code class="language-bash">util/gem5img.py mount m5_binaries/disks/ubuntu-18.04-amd64.img m5_binaries/mnt</code></pre>
                 <p>Download the Ubuntu 18 base root files and copy them into your mounted disk using the following commands:</p>
-                <pre><code class="language-bash">cd ../m5_binaries
+                <pre><code class="language-bash">cd m5_binaries
 wget http://cdimage.ubuntu.com/ubuntu-base/releases/18.04/release/ubuntu-base-18.04.5-base-amd64.tar.gz</code></pre>
                 <p>Next, copy the root files into the mounted directory.</p>
                 <pre><code class="language-bash">sudo tar xzvf ubuntu-base-18.04.5-base-amd64.tar.gz -C mnt</code></pre>
