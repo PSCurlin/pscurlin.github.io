@@ -109,7 +109,14 @@ sleep 10
 /sbin/m5 exit
 fi
 echo "No script found"</code></pre>    
-
+                <!-- fstab -->
+                <p>You will also need to update the <code>/etc/fstab</code> file to include at least one partition. This can be editted as needed.</p>
+<pre><code class="language-c-like"># /etc/fstab: static file system information.
+#
+# &lt;file system&gt;    &lt;mount point&gt;   &lt;type&gt;  &lt;options&gt;   &lt;dump&gt;  &lt;pass&gt;
+#
+/dev/hda1      /       ext3        noatime     0 1
+</code></pre>    
                 <!-- chroot: exit -->
                 <h3> Exiting and unmounting</h2>
                 <p>To leave the <code>chroot</code>, simply <code>exit</code>. This will take you back to your host machine's <code>m5_binaries</code> directory:</p>
