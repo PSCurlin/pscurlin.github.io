@@ -28,10 +28,10 @@
                 <!-- Creating an empty disk -->
                 <h2>Create the empty disk with the gem5 utility</h2>
                 <p>For the sake of simplicity, <code>cd</code> to your gem5 directory. Then create a directory where you will work on creating the disk image:</p>
-                <pre><code class="language-bash">mkdir m5_binaries; mkdir m5_binaries/mnt; mkdir m5_binaries/disks; mkdir m5_binaries/binaries</code></pre>
+                <pre><code class="language-bash">mkdir m5_binaries; mkdir m5_binaries/mnt; mkdir m5_binaries/disks; mkdir m5_binaries/binaries;</code></pre>
 
                 <p>Next, from the gem5 source directory, we will create an empty disk image using the gem5 utility script. You can set the size of the image as needed for your application:</p>
-                <pre><code class="language-bash">util/gem5img.py init m5_binaries/disks/ubuntu-18.04-amd64.img 8192</code></pre>
+                <pre><code class="language-bash">util/gem5img.py init m5_binaries/disks/ubuntu-18.04-amd64.img 5120;</code></pre>
                 <p><i>Note:</i> if you get an error from the <code>gem5img.py</code> stating <code>TypeError: 'float' object cannot be interpreted as an integer</code>, then all you have to do is 
                 go to line 361 within <code>gem5img.py</code> where it indicates <code>os.lseek(fd, size - 1, os.SEEK_SET)</code> and change it to <code>os.lseek(fd, int(size) - 1, os.SEEK_SET)</code>.</p>
                 <p></p>
@@ -39,36 +39,36 @@
                 <!-- Mounting the disk and adding the root files -->
                 <h2>Mounting the disk and adding the root files</h2>
                 <p>Now that the empty disk has been created, you will need to mount it.</p>
-                <pre><code class="language-bash">util/gem5img.py mount m5_binaries/disks/ubuntu-18.04-amd64.img m5_binaries/mnt</code></pre>
+                <pre><code class="language-bash">util/gem5img.py mount m5_binaries/disks/ubuntu-18.04-amd64.img m5_binaries/mnt;</code></pre>
                 <p>Download the Ubuntu 18 base root files and copy them into your mounted disk using the following commands:</p>
-                <pre><code class="language-bash">cd m5_binaries
-wget http://cdimage.ubuntu.com/ubuntu-base/releases/18.04/release/ubuntu-base-18.04.5-base-amd64.tar.gz</code></pre>
+                <pre><code class="language-bash">cd m5_binaries;
+wget http://cdimage.ubuntu.com/ubuntu-base/releases/18.04/release/ubuntu-base-18.04.5-base-amd64.tar.gz;</code></pre>
                 <p>Next, copy the root files into the mounted directory.</p>
-                <pre><code class="language-bash">sudo tar xzvf ubuntu-base-18.04.5-base-amd64.tar.gz -C mnt</code></pre>
+                <pre><code class="language-bash">sudo tar xzvf ubuntu-base-18.04.5-base-amd64.tar.gz -C mnt;</code></pre>
                 <p>Finally copy your configuration file from your system into the mounted disk image to be able to use <code>chroot</code>.</p>
-                <pre><code class="language-bash">sudo cp /etc/resolv.conf mnt/etc/</code></pre>
+                <pre><code class="language-bash">sudo cp /etc/resolv.conf mnt/etc/;</code></pre>
 
                 <!-- chroot -->
                 <h2> Using <code>chroot</code></h2>
                 <h3> Binding and setting the root directory</h3>
                 <p>The <code>chroot</code> command allows to change the root to the source directory of the mounted image. You will first need to mount the disk image from the <code>gem5</code> directory.</p>
                 <p>You will need to bind some of your host system's directories to those of the mounted disk.</p>
-                <pre><code class="language-bash">sudo /bin/mount -o bind /sys mnt/sys
-sudo /bin/mount -o bind /dev mnt/dev
-sudo /bin/mount -o bind /proc mnt/proc</code></pre>
+                <pre><code class="language-bash">sudo /bin/mount -o bind /sys mnt/sys;
+sudo /bin/mount -o bind /dev mnt/dev;
+sudo /bin/mount -o bind /proc mnt/proc;</code></pre>
                 <p>Finally, to <code>chroot</code>, use the following command:</p>
-                <pre><code class="language-bash">sudo /usr/sbin/chroot mnt /bin/bash</code></pre>
+                <pre><code class="language-bash">sudo /usr/sbin/chroot mnt /bin/bash;</code></pre>
                 <!-- chroot: installing packages -->
                 <h3> Installing packages on the disk image</h2>
                 <p>Now that we are in the root directory of the disk image, we can update and install some packages.</p>
                 <pre><code class="language-bash">apt-get update; apt-get install software-properties-common -y; add-apt-repository universe;</code></pre>
                 <p>The following command is not required, but I have included also some useful packages to install (either for benchmarks or for building your own kernel within the disk image).</p>
-                <pre><code class="language-bash">apt-get install gcc g++ systemd linux-generic make wget -y</code></pre>
+                <pre><code class="language-bash">apt-get install gcc g++ systemd linux-generic make wget -y;</code></pre>
                 <!-- chroot: gem5 files on disk image -->
                 <h3> Setting up the required gem5 files</h2>
                 <p>From the root directory of your disk image, download the following file and unpack it:</p>
-                <pre><code class="language-bash">wget http://cs.wisc.edu/~powerjg/files/gem5-guest-tools-x86.tgz; tar xzvf gem5-guest-tools-x86.tgz
-cd gem5-guest-tools/; ./install</code></pre>
+                <pre><code class="language-bash">wget http://cs.wisc.edu/~powerjg/files/gem5-guest-tools-x86.tgz; tar xzvf gem5-guest-tools-x86.tgz;
+cd gem5-guest-tools/; ./install;</code></pre>
                 <p>You will need to add/create some files. The first one is <code>/lib/systemd/system/gem5.service</code>. Paste the following code into it.</p>
                 <pre><code class="language-c-like">    [Unit]
 Description=gem5 init script
@@ -85,7 +85,7 @@ StandardError=tty
 [Install]
 WantedBy=default.target</code></pre>
                 <p>Enable the gem5 service and disable the <code>ttyS0</code> service.</p>
-                <pre><code class="language-bash">systemctl enable gem5.service; systemctl mask serial-getty@ttyS0.service</code></pre>
+                <pre><code class="language-bash">systemctl enable gem5.service; systemctl mask serial-getty@ttyS0.service;</code></pre>
                 <p>Next, create <code>/sbin/gem5init</code>. If the file already exists, make sure that the if statement containing <code>"$CPU"</code> checks to see if the name is not <code>HygonGenuine</code> as well as shown below. An API change in gem5 for v22.1.0.0 indicates that the default string for the CPU type in gem5 is no longer <code>M5 Simulator</code> but instead <code>HygonGenuine</code>. I modified the original <code>gem5init</code> script to reflect this.</p>
                 <pre><code class="language-c-like"> #!/bin/bash -
 
@@ -118,15 +118,25 @@ echo "No script found"</code></pre>
 #
 /dev/hda1      /       ext3        noatime     0 1
 </code></pre>    
+                <!-- localhist -->
+                <p>Finall, update <code>/etc/hosts</code> for the localhost loopback.</p>
+<pre><code class="language-c-like">127.0.0.1 localhost
+::1 localhost ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+ff02::3 ip6-allhosts
+</code></pre>    
                 <!-- chroot: exit -->
                 <h3> Exiting and unmounting</h2>
                 <p>To leave the <code>chroot</code>, simply <code>exit</code>. This will take you back to your host machine's <code>m5_binaries</code> directory:</p>
                 <pre><code class="language-bash">exit</code></pre>
                 <p>You will also need to unbind the directories before unmounting the disk.</p>
-                <pre><code class="language-bash">sudo /bin/umount mnt/sys
-sudo /bin/umount mnt/proc
-sudo /bin/umount mnt/dev
-sudo umount mnt</code></pre>
+                <pre><code class="language-bash">sudo /bin/umount mnt/sys;
+sudo /bin/umount mnt/proc;
+sudo /bin/umount mnt/dev;
+sudo umount mnt;</code></pre>
 
                 <!-- Linux kernels -->
                 <h2>Linux kernel</h2>
@@ -135,7 +145,7 @@ sudo umount mnt</code></pre>
                 <!-- Method 1: pre-built -->
                 <h3>Method 1: Download a pre-built kernel</h3>
                 <p>All you need to do is download the pre-built kernel from gem5's website into the binaries directory within <code>m5_binaries</code>.</p>
-                <pre><code class="language-bash">wget http://dist.gem5.org/dist/v22-1/kernels/x86/static/vmlinux-5.4.49 -P binaries</code></pre>
+                <pre><code class="language-bash">wget http://dist.gem5.org/dist/v22-1/kernels/x86/static/vmlinux-5.4.49 -P binaries;</code></pre>
                 
                 <!-- Method 2: build -->
                 <h3>Method 2: Build your own kernel within the disk image</h3>
@@ -143,28 +153,28 @@ sudo umount mnt</code></pre>
                 <pre><code class="language-bash">sudo apt-get install linux-generic gcc g++ make</code></pre>
                 <p>This method is more lengthy and complicated. First, you will need to have a version of binutils that is compatible with Ubuntu 18. 
                 This means that you will either need to compile the kernel on a machine running Ubuntu 18 OR <code>chroot</code> into the disk image and build it within the disk image (which is why I specified 8GB for the disk image initially). <i>Note:</i> the linux repository will be ~3GB so ensure that you have enough disk space.</p>
-                <pre><code class="language-bash">git clone https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git</code></pre>
+                <pre><code class="language-bash">git clone https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git;</code></pre>
                 <p>We will also need to download the configuration file from to use when building the kernel.</p>
-                <pre><code class="language-bash">wget https://gem5.googlesource.com/public/gem5-resources/+archive/refs/heads/stable/src/linux-kernel/linux-configs.tar.gz 
-mkdir linux-configs; tar xzvf linux-configs.tar.gz -C linux-configs</code></pre>
+                <pre><code class="language-bash">wget https://gem5.googlesource.com/public/gem5-resources/+archive/refs/heads/stable/src/linux-kernel/linux-configs.tar.gz;
+mkdir linux-configs; tar xzvf linux-configs.tar.gz -C linux-configs;</code></pre>
                 <p>Before building the kernel, I made some modifications to the configuration file as I was getting issues with gem5 not recognizing a mouse driver (which we do not need anyways).</p>
                 <p>With the editor of your choice, <b>modify</b> the <code>config.x86.5.4.49</code> inside configuration file linux-configs and change the line containing <code>CONFIG_INPUT_MOUSEDEV=y</code> to <code>CONFIG_INPUT_MOUSEDEV=n</code>.</p>    
-                <pre><code class="language-bash">cp linux-configs/config.x86.5.4.49 linux/.config
-cd linux
-git checkout v5.4.49
-make vmlinux -j `nproc`
+                <pre><code class="language-bash">cp linux-configs/config.x86.5.4.49 linux/.config;
+cd linux;
+git checkout v5.4.49;
+make vmlinux -j `nproc`;
                 </code></pre>
                 <p><i>Note:</i> If you want to fully clean using make, use <code>make distclean</code>. This will also delete the <code>.config</code> file, so you will need to copy it again.</p>
                 <p>At the end of the make run, you should now have a file called <code>vmlinux</code> in the linux source directory. You can exit the <code>chroot</code> and then copy the <code>vmlinux</code> file into the binaries directory.</p>
-                <pre><code class="language-bash">exit
-sudo cp mnt/linux/vmlinux binaries/
+                <pre><code class="language-bash">exit;
+sudo cp mnt/linux/vmlinux binaries/;
                 </code></pre>
 
                 <!-- Testing the disk image -->
                 <h2>Testing the disk image</h2>
                 <p>Create a directory inside the gem5 directory called <code>bootscripts</code>.</p>
-                <pre><code class="language-bash">mkdir bootscript
-echo -e "echo 'hello world'\n/sbin/m5 exit" > bootscripts/hello.rcS</code></pre>
+                <pre><code class="language-bash">mkdir bootscript;
+echo -e "echo 'hello world'\n/sbin/m5 exit" > bootscripts/hello.rcS;</code></pre>
                 <p>Now, all you need to do is run FS mode as you usally would using <code>hello.rcS</code> as its script. You can monitor gem5 and disk image activity by using telnet.</p>
                 <pre><code class="language-bash">telnet localhost 3456</code></pre>
                 <p>The output of telnet should show something like the following indicating success:</p>
