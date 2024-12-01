@@ -69,10 +69,24 @@
             border-radius: 5px;
             width: 80%;
             max-width: 600px;
+            text-align: justify;
+        }
+        .overlay-header {
             text-align: center;
+            font-size: 13px;
+            margin-bottom: 10px; /* Add margin to create space below */
+            margin-top: -10px;
+        }
+        .overlay-img {
+            width: 35%;
+            margin-bottom: 20px;
+            align-items: center;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
         .close-btn {
-            background: #f44336;
+            background: #267CB9;
             color: white;
             border: none;
             padding: 10px 20px;
@@ -89,6 +103,10 @@
         <div class="project" 
              data-title="{{ post.title }}" 
              data-content="{{ post.content | escape }}" 
+             data-ack="{{ post.ack }}"
+             data-dates="{{ post.dates }}"
+             data-type="{{ post.type }}"
+             data-img="img/{{ post.slug }}.png"
              onclick="showOverlay(this)">
             <img src="img/{{ post.slug }}.png" alt="{{ post.title }}">
             <div class="project-text">{{ post.short }}</div>
@@ -97,25 +115,28 @@
     </div>
     <div id="overlay" class="overlay">
         <div class="overlay-content">
-            <h2 id="overlay-title"></h2>
+            <h2 id="overlay-title" style="text-align: center; font-size: 25px"></h2>
+            <img id="overlay-img" class="overlay-img">
+            <div id="overlay-header" class="overlay-header"></div>
             <div id="overlay-details"></div>
+            <div id="overlay-ack" style="font-size: 11px;"></div>
             <button class="close-btn" onclick="hideOverlay()">Close</button>
         </div>
     </div>
-    <div id="overlay" class="overlay">
-        <div class="overlay-content">
-            <h2 id="overlay-title"></h2>
-            <p id="overlay-details"></p>
-            <button class="close-btn" onclick="hideOverlay()">Close</button>
-        </div>
     </div>
     <script>
         function showOverlay(element) {
             const title = element.getAttribute('data-title');
             const content = element.getAttribute('data-content');
+            const ack = element.getAttribute('data-ack');
+            const dates = element.getAttribute('data-dates');
+            const img = element.getAttribute('data-img');
             document.getElementById('overlay-title').innerText = title;
             document.getElementById('overlay-details').innerHTML = content;
+            document.getElementById('overlay-ack').innerHTML = "Work supported by " + ack;
+            document.getElementById('overlay-header').innerHTML = dates + " | " + element.getAttribute('data-type');
             document.getElementById('overlay').style.display = 'flex';
+            document.getElementById("overlay-img").src = img;
         }
 
         function hideOverlay() {
