@@ -1,0 +1,125 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .projects-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10%;
+            justify-content: center;
+        }
+        .project {
+            width: 25%;
+            height: 0;
+            padding-bottom: 22.5%;
+            box-sizing: border-box;
+            align-items: center;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: background-color 0.3s, color 0.3s;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+        }
+        .project img {
+            position: absolute;
+            width: 100%; /* Adjust this value to reduce the image size */
+            height: 100%; /* Adjust this value to reduce the image size */
+            object-fit: cover;
+            transition: transform 0.3s, filter 0.3s;
+            align-items: center;            
+            /* Vertical align */
+            top: 0%;
+            /* left: 0%; */
+        }
+        .project:hover img {
+            transform: scale(1.1);
+            align-items: center;
+        }
+        .project-text {
+            color: white;
+            background-color: rgba(0, 0, 0, 0.7);
+            /* border-radius: 5px; */
+            opacity: 0;
+            height: auto;
+            transition: opacity 0.3s;
+            position: absolute;
+            top: 40%;
+            text-align: center;
+            width: 95%;
+        }
+        .project:hover .project-text {
+            opacity: 1;
+        }
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .overlay-content {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            width: 80%;
+            max-width: 600px;
+            text-align: center;
+        }
+        .close-btn {
+            background: #f44336;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2 style="text-align: center;"> Projects </h2>
+    <div class="projects-container">
+        {% for post in site.posts %}
+        <div class="project" 
+             data-title="{{ post.title }}" 
+             data-content="{{ post.content | escape }}" 
+             onclick="showOverlay(this)">
+            <img src="img/{{ post.slug }}.png" alt="{{ post.title }}">
+            <div class="project-text">{{ post.short }}</div>
+        </div>
+        {% endfor %}
+    </div>
+    <div id="overlay" class="overlay">
+        <div class="overlay-content">
+            <h2 id="overlay-title"></h2>
+            <div id="overlay-details"></div>
+            <button class="close-btn" onclick="hideOverlay()">Close</button>
+        </div>
+    </div>
+    <div id="overlay" class="overlay">
+        <div class="overlay-content">
+            <h2 id="overlay-title"></h2>
+            <p id="overlay-details"></p>
+            <button class="close-btn" onclick="hideOverlay()">Close</button>
+        </div>
+    </div>
+    <script>
+        function showOverlay(element) {
+            const title = element.getAttribute('data-title');
+            const content = element.getAttribute('data-content');
+            document.getElementById('overlay-title').innerText = title;
+            document.getElementById('overlay-details').innerHTML = content;
+            document.getElementById('overlay').style.display = 'flex';
+        }
+
+        function hideOverlay() {
+            document.getElementById('overlay').style.display = 'none';
+        }
+    </script>
+</body>
