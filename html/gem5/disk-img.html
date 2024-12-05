@@ -23,7 +23,7 @@
                 <!-- Page title -->
                 <h1 style="padding-top:5%">Creating an x86 disk image from scratch</h1>
                 <!-- Page body -->
-                <p>This tutorial follows gem5's utility script to setup an x86 disk image for full system mode running Ubuntu 18.04.6 LTS. All the steps were tested using Ubuntu 20.04.06 LTS running on x86 hardware. </p>
+                <p>This tutorial follows gem5's utility script to setup an x86 disk image for full system mode running Ubuntu 22.04 LTS. All the steps were tested using Ubuntu 20.04.06 LTS running on x86 hardware. </p>
                 
                 <!-- Creating an empty disk -->
                 <h2>Create the empty disk with the gem5 utility</h2>
@@ -42,9 +42,9 @@
                 <pre><code class="language-bash">util/gem5img.py mount m5_binaries/disks/ubuntu-18.04-amd64.img m5_binaries/mnt;</code></pre>
                 <p>Download the Ubuntu 18 base root files and copy them into your mounted disk using the following commands:</p>
                 <pre><code class="language-bash">cd m5_binaries;
-wget http://cdimage.ubuntu.com/ubuntu-base/releases/18.04/release/ubuntu-base-18.04.5-base-amd64.tar.gz;</code></pre>
+wget http://cdimage.ubuntu.com/ubuntu-base/releases/22.04/release/ubuntu-base-22.04-base-amd64.tar.gz;</code></pre>
                 <p>Next, copy the root files into the mounted directory.</p>
-                <pre><code class="language-bash">sudo tar xzvf ubuntu-base-18.04.5-base-amd64.tar.gz -C mnt;</code></pre>
+                <pre><code class="language-bash">sudo tar xzvf ubuntu-base-22.04-base-amd64.tar.gz -C mnt;</code></pre>
                 <p>Finally copy your configuration file from your system into the mounted disk image to be able to use <code>chroot</code>.</p>
                 <pre><code class="language-bash">sudo cp /etc/resolv.conf mnt/etc/;</code></pre>
 
