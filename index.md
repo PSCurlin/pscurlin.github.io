@@ -2,122 +2,36 @@
 layout: default
 ---
 
-Text can be **bold**, _italic_, or ~~strikethrough~~.
+## Publications
 
-[Link to another page](./another-page.html).
+### Journals
 
-There should be whitespace between paragraphs.
+- S. Thomas, K. Workneh, A-T. Ishimwe, Z. McKevitt, **P. Curlin**, R. I. Bahar, J. Izraelevitz, T. S. Lehman "Baobab Merkle Tree for Efficient Secure Memory," in IEEE Computer Architecture Letters, vol. 23, no. 1, pp. 33-36, Jan.-June 2024, doi: 10.1109/LCA.2024.3360709.
 
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
+### Workshop Papers
 
-# Header 1
+- **P. Curlin**, M. Muniz, M. Bell, A. Muniz, J. Burns "Virtual Reality Digital Twin and Environment for Troubleshooting Lunar-based Infrastructure Assembly Failures," in 5th International Workshop on Virtual, Augmented, and Mixed Reality for Human-Robot Interaction (VAM-HRI), ACM/IEEE International Conference on Human-Robot Interaction (HRI), March 2022.
 
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
+## Research
 
-## Header 2
+### VR Twin for Troubleshooting Lunar-based Assembly Failures (2020-2022)
 
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
+<img src="/assets/img/armstrong.png" alt="Armstrong" style="width:30%; height:100%; float: right; margin-left: 15px; ">
 
-### Header 3
+<div style="text-align: left;">
+  NASA will return to the Moon to conduct lunar and space science and prepare for human exploration missions. NASA's current rover failure response methods use hardware duplicates which are costly and time consuming to assemble. To address this, we developed and assessed a VR digital rover twin in a simulated environment using novel technologies to support lunar robotic missions, like <a href="https://www.lpi.usra.edu/leag/white-papers-astronomy/FARSIDE_190710_Final.pdf">FARSIDE</a>.<br>
+  <span style="font-size: smaller;">Work supported by NASA-funded <a href="https://www.colorado.edu/ness/" style="font-size:12px;">NESS</a> and <a href="https://www.lunarscience.nasa.gov/" style="font-size:12px;">NASA SSERVI</a>.</span>
+  <br><br>
+</div>
 
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
-```
+## Projects
 
-```ruby
-# Ruby code with syntax highlighting
-GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version}")
-end
-```
+### Free Induction Decay Frequency Extraction Engine (2021-2022)
 
-#### Header 4
+<img src="/assets/img/fid.png" alt="FID" style="width:30%; height:100%; float: left; margin-right: 15px; ">
 
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-
-##### Header 5
-
-1.  This is an ordered list following a header.
-2.  This is an ordered list following a header.
-3.  This is an ordered list following a header.
-
-###### Header 6
-
-| head1        | head two          | three |
-|:-------------|:------------------|:------|
-| ok           | good swedish fish | nice  |
-| out of stock | good and plenty   | nice  |
-| ok           | good `oreos`      | hmm   |
-| ok           | good `zoute` drop | yumm  |
-
-### There's a horizontal rule below this.
-
-* * *
-
-### Here is an unordered list:
-
-*   Item foo
-*   Item bar
-*   Item baz
-*   Item zip
-
-### And an ordered list:
-
-1.  Item one
-1.  Item two
-1.  Item three
-1.  Item four
-
-### And a nested list:
-
-- level 1 item
-  - level 2 item
-  - level 2 item
-    - level 3 item
-    - level 3 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-
-### Small image
-
-![Octocat](https://github.githubassets.com/images/icons/emoji/octocat.png)
-
-### Large image
-
-![Branching](https://guides.github.com/activities/hello-world/branching.png)
-
-
-### Definition lists can be used with HTML syntax.
-
-<dl>
-<dt>Name</dt>
-<dd>Godzilla</dd>
-<dt>Born</dt>
-<dd>1952</dd>
-<dt>Birthplace</dt>
-<dd>Japan</dd>
-<dt>Color</dt>
-<dd>Green</dd>
-</dl>
-
-```
-Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-```
-
-```
-The final element.
-```
+<div style="text-align: left;">
+  Current methods for measuring the magnetic field produced by the brain are expensive and cumbersome. FieldLine Inc. has developed a magnetometer that does not require the use of shielded rooms and can provide data in real-time. For our senior design project, we created a frequency extraction engine to be used with our sponsor's Free Induction Decay magnetometers. See our project <a href="https://www.colorado.edu/ecee/fid-frequency-extraction-engine"> here </a>.
+  <br>
+  <span style="font-size: smaller;">Work sponsored by <a href="https://fieldlineinc.com/">FieldLine Inc</a>.</span>
+</div>

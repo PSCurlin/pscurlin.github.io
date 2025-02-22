@@ -1,6 +1,18 @@
-title: Minimal theme
-logo: /assets/img/logo.png
-description: Minimal is a theme for GitHub Pages.
-show_downloads: true
+title: Phaedra Sophia Curlin
+logo: /assets/img/curlin.jpg
+description: |
+  <br>
+  I am a 3rd year PhD student in Electrical Engineering at the University of Colorado
+  Boulder under the supervision of <a href="https://www.colorado.edu/faculty/lehmantamara/">Prof. Tamara Silbergleit Lehman</a>.
+  <br> <br>
+  I obtained my BSc in Electrical and Computer Engineering at the University of Colorado Boulder in 2022.
+  During my undergraduate degree, I researched applications of VR/AR to lunar robotics under the guidance of 
+  <a href="https://www.colorado.edu/faculty/burns/">Prof. Jack O. Burns</a>.
+  <br> <br>
+  CV available upon request. You can reach me at: phaedra.curlin{at}colorado.edu.
+show_downloads: false
 google_analytics:
+social:
+  github: PSCurlin
+  linkedin: phaedra-sophia-c-05743889
 theme: jekyll-theme-minimal
