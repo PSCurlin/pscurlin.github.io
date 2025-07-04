@@ -1,0 +1,19 @@
+.post-title {
+    margin-bottom: 1.5rem !important;
+}
+
+.post-content p,
+.post-content br {
+  margin-bottom: 1em;
+  display: block;
+}
+
+/* Add spacing between paragraphs, but not before .pub-links */
+.post-content p {
+  margin-bottom: 1.5rem;
+}
+
+/* Remove bottom margin if the next element is .pub-links */
+.post-content p:has(+ .pub-links) {
+  margin-bottom: 0em;
+}

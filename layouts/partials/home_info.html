@@ -1,0 +1,19 @@
+{{ with site.GetPage "homeinfo" }}
+<article class="home-info">
+    <header class="entry-header">
+        <h1>{{ .Title | markdownify }}</h1>
+    </header>
+    <div style="display: flex; align-items: center; gap: 2rem;">
+        {{ with .Params.image }}
+        <img src="{{ . | relURL }}" alt="Profile image"
+             style="width: 180px; height: 180px; object-fit: cover; border-radius: 50%; flex-shrink: 0; margin-bottom: 2rem;">
+        {{ end }}
+        <div class="entry-content" style="flex: 1;">
+            {{ .Content }}
+            <footer class="entry-footer" style="margin-top: 0.5rem;">
+                {{ partial "social_icons.html" (dict "align" site.Params.homeInfoParams.AlignSocialIconsTo) }}
+            </footer>
+        </div>
+    </div>
+</article>
+{{ end }}

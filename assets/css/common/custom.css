@@ -1,0 +1,137 @@
+
+a[href="/abstracts/"]:hover {
+  text-decoration: underline;
+}
+
+.pub-links a {
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+  font-size: 1em;
+  line-height: 1.2;
+}
+
+.pub-links a:hover {
+  color: #156dab !important;
+}
+
+.pub-links svg {
+  margin-right: 0.3em;
+  display: inline-block;
+  height: 1em;
+  width: 1em;
+  vertical-align: bottom;
+}
+
+.pub-links  a:hover svg {
+  stroke-width: 3;
+}
+
+.publication-info .entry-content {
+  -webkit-line-clamp: unset !important;
+  overflow: visible !important;
+  display: block !important;
+  white-space: normal !important;
+  text-overflow: unset !important;
+}
+
+.main {
+    max-width: calc(var(--main-width) + var(--gap) * 3.5) !important;
+}
+
+.social-icons a:hover svg,
+.social-icons a:focus svg {
+  filter: invert(0.35);
+  transition: filter 0.2s;
+}
+
+.more-link a {
+  font-size: 16px;
+  text-decoration: none;
+  transition: text-decoration 0.2s;
+}
+.more-link a:hover {
+  text-decoration: underline;
+}
+
+/* Home-info */
+
+.home-info {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 320px;
+    margin: var(--gap) 0 calc(var(--gap) * 0.5);
+}
+
+.home-info .entry-header {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}
+
+.home-info .entry-header h1 {
+    font-size: 34px;
+    line-height: 1.3;
+}
+
+.home-info .entry-content {
+    margin: 14px 0;
+    font-size: 16px;
+    -webkit-line-clamp: 3;
+}
+
+.home-info .entry-footer {
+    font-size: 14px;
+}
+
+.home-info .entry-content a:hover,
+.about-links a:hover {
+  text-decoration: underline;
+}
+
+/* Post-entry */
+
+.first-entry {
+    margin: -2rem 0 0 0 !important;
+}
+
+.entry-content div[style*="display:flex"] {
+  -webkit-line-clamp: unset !important;
+  overflow: visible !important;
+  text-overflow: unset !important;
+  white-space: normal !important;
+}
+
+.entry-content div[style*="display:flex"] a {
+  min-width: 0 !important;
+  white-space: normal !important;
+  overflow: visible !important;
+  text-overflow: unset !important;
+}
+
+b,
+strong {
+  color: #156dab;
+}
+
+/* Blue for About Me hyperlinks */
+.home-info .entry-content a,
+.about-links a {
+  color: #156dab;
+  text-decoration: none;
+  transition: text-decoration 0.2s, color 0.2s;
+}
+
+.home-info .entry-content a:hover,
+.about-links a:hover {
+  text-decoration: underline;
+  color: #0d3e6e;
+}
+
+header.header a:hover,
+nav.nav a:hover {
+  color: #156dab;
+}
