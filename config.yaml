@@ -2,7 +2,7 @@ baseURL: https://www.pscurlin.com/
 languageCode: en-us
 title: Phaedra Sophia Curlin
 theme: ["PaperMod"]
-paginate: 5
+paginate: 10
 
 enableRobotsTXT: true
 buildDrafts: false
