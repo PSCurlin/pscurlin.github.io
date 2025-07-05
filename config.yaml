@@ -116,3 +116,7 @@ markup:
     # guessSyntax: true
     # lineNos: true
     # style: monokai
+
+caches:
+  images:
+    dir: :cacheDir/images
