@@ -51,8 +51,8 @@
 {{- partial "home_info.html" . }}
 {{- end }}
 
-{{- partial "publications_info.html" . }}
-{{- partial "unpublished_info.html" . }}
+{{- partial "publications.html" . }}
+{{- partial "unpublished.html" . }}
 
 {{- $term := .Data.Term }}
 {{- range $index, $page := $paginator.Pages }}

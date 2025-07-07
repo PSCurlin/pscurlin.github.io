@@ -54,21 +54,6 @@ params:
     # icon: /apple-touch-icon.png
     iconHeight: 35
 
-  # profile-mode
-  # profileMode:
-  #   enabled: false # needs to be explicitly set
-  #   title: ExampleSite
-  #   subtitle: "This is subtitle"
-  #   imageUrl: "static/img/curlin.png"
-  #   imageWidth: 120
-  #   imageHeight: 120
-  #   imageTitle: my image
-  #   buttons:
-  #     - name: Posts
-  #       url: posts
-  #     - name: Tags
-  #       url: tags
-
   # home-info mode
   homeInfoParams:
     Title: ""
@@ -100,12 +85,17 @@ menu:
   main:
     - identifier: Publications
       name: Publications
-      url: /Publications/
+      url: /pub/
       weight: 1
     - identifier: Abstracts & Posters
       name: Abstracts & Posters
       url: /unpub/
       weight: 2
+      weight: 10
+    - identifier: Past Work
+      name: Past Work
+      url: /past-work/
+      weight: 3
       weight: 10
 
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma

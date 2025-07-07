@@ -11,9 +11,31 @@
 /* Add spacing between paragraphs, but not before .pub-links */
 .post-content p {
   margin-bottom: 1.5rem;
+
+}
+
+.post-content {
+    color: var(--secondary) !important;
+    font-weight: 500;
+    font-size: 16px;
+
 }
 
 /* Remove bottom margin if the next element is .pub-links */
 .post-content p:has(+ .pub-links) {
   margin-bottom: 0em;
+}
+
+.post-content a {
+  color: #156dab;
+}
+
+/* Example: assets/css/common/post-single.css */
+.post-subtitle {
+  margin-top: -1rem;
+  margin-bottom: 2rem;
+  color: #666;
+  font-size: 1.25rem;
+  font-weight: 400;
+  text-align: left;
 }

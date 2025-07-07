@@ -1,0 +1,122 @@
+<style>
+.carousel-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  color: #fff;
+  background: rgba(0,0,0,0.6);
+  padding: 0.5em 1em;
+  font-size: 0.8em;
+  z-index: 2;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: 20rem;
+  margin-top: -1.25rem;  
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.carousel-slide {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(.77,0,.18,1);
+  will-change: transform;
+  height: 100%;
+}
+
+.carousel-item {
+  min-width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-slide img {
+  width: 35%;
+  object-fit: cover;
+  display: block;
+}
+
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.carousel-nav button {
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+</style>
+
+<div class="carousel-container" id="carousel-{{ .Ordinal }}">
+  <div class="carousel-slide">
+    {{ range $i, $img := .Params }}
+      {{ $parts := split $img "|" }}
+      {{ $src := index $parts 0 | safeURL }}
+      {{ $caption := cond (ge (len $parts) 2) (index $parts 1) "" }}
+      {{ $width := cond (ge (len $parts) 3) (index $parts 2) "100%" }}
+      <div class="carousel-item">
+        <img src="{{ $src }}"
+             alt="{{ $caption }}"
+             style="width:{{ $width }};max-width:100%;max-height:100%;object-fit:cover;display:block;margin:0 auto;" />
+        <div class="carousel-caption">{{ $caption }}</div>
+      </div>
+    {{ end }}
+  </div>
+  {{ if gt (len .Params) 1 }}
+  <div class="carousel-nav">
+    <button onclick="moveSlide({{ .Ordinal }}, -1)">‹</button>
+    <button onclick="moveSlide({{ .Ordinal }}, 1)">›</button>
+  </div>
+  {{ end }}
+</div>
+
+<script>
+if (!window.carouselStates) {
+  window.carouselStates = {};
+}
+
+function moveSlide(id, direction) {
+  const container = document.getElementById("carousel-" + id);
+  const slide = container.querySelector(".carousel-slide");
+  const slides = slide.children;
+  const totalSlides = slides.length;
+
+  if (!(id in window.carouselStates)) {
+    window.carouselStates[id] = 0;
+  }
+
+  let index = window.carouselStates[id] + direction;
+  if (index < 0) index = totalSlides - 1;
+  if (index >= totalSlides) index = 0;
+  window.carouselStates[id] = index;
+
+  // Move the slide container
+  slide.style.transform = `translateX(-${index * 100}%)`;
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelectorAll('[id^="carousel-"]').forEach(function(container) {
+    const slide = container.querySelector(".carousel-slide");
+    if (slide) {
+      slide.style.transform = "translateX(0%)";
+    }
+  });
+});
+</script>

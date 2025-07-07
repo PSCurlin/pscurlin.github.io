@@ -1,0 +1,6 @@
+{{ with .Page.Params.start }}
+  <span style="color:#888; font-size:0.95em; display:inline-block">
+    {{ (time .).Format "Jan 2006" }}
+    {{ with $.Page.Params.end }} – {{ (time .).Format "Jan 2006" }}{{ end }}
+  </span>
+{{ end }}

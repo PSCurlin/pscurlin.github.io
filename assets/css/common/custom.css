@@ -1,4 +1,3 @@
-
 a[href="/abstracts/"]:hover {
   text-decoration: underline;
 }
@@ -9,10 +8,13 @@ a[href="/abstracts/"]:hover {
   vertical-align: middle;
   font-size: 1em;
   line-height: 1.2;
+  filter: brightness(1.5); /* Always bright */
 }
 
 .pub-links a:hover {
   color: #156dab !important;
+  filter: none; /* Remove brightness on hover */
+
 }
 
 .pub-links svg {
@@ -34,6 +36,8 @@ a[href="/abstracts/"]:hover {
   white-space: normal !important;
   text-overflow: unset !important;
 }
+
+
 
 .main {
     max-width: calc(var(--main-width) + var(--gap) * 3.5) !important;
@@ -102,7 +106,7 @@ a[href="/abstracts/"]:hover {
   -webkit-line-clamp: unset !important;
   overflow: visible !important;
   text-overflow: unset !important;
-  white-space: normal !important;
+  white-space: normal !important; 
 }
 
 .entry-content div[style*="display:flex"] a {
@@ -114,7 +118,7 @@ a[href="/abstracts/"]:hover {
 
 b,
 strong {
-  color: #156dab;
+  /* color: #156dab; */
 }
 
 /* Blue for About Me hyperlinks */
@@ -135,3 +139,9 @@ header.header a:hover,
 nav.nav a:hover {
   color: #156dab;
 }
+
+.breadcrumbs a:hover {
+  text-decoration: underline !important;
+}
+
+
