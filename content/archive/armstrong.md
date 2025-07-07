@@ -4,8 +4,8 @@ tile: "/img/armstrong0.png"
 hiddenInHomeList: true
 start: 2020-03-01
 end: 2022-05-01
-kind: "research"
 subtitle: "Undergraduate Research"
+kind: "research"
 ---
 
 {{< subtitle >}}
