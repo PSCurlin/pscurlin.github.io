@@ -12,7 +12,7 @@
 
     {{- if (and ($bc_pg) (gt (len . ) 0))}}
       {{- print "&nbsp;»&nbsp;" | safeHTML -}}
-      <a href="{{ with $.Params.parentlink }}{{ . }}{{ else }}{{ $bc_pg.Permalink }}{{ end }}">
+      <a href="{{ with $.Params.parentlink }}{{ . | urlize }}{{ else }}{{ $bc_pg.Permalink }}{{ end }}">
         {{ with $.Params.header }}{{ . }}{{ else }}{{ $bc_pg.Name }}{{ end }}
       </a>
     {{- end }}

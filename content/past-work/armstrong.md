@@ -6,6 +6,7 @@ start: 2020-03-01
 end: 2022-05-01
 subtitle: "Undergraduate Research"
 type: "research"
+header: "Past Work"
 ---
 
 {{< subtitle >}}

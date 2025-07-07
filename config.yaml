@@ -94,7 +94,7 @@ menu:
       weight: 10
     - identifier: Past Work
       name: Past Work
-      url: /past-work/
+      url: /archive/
       weight: 3
       weight: 10
 

@@ -1,6 +1,5 @@
-<!-- filepath: /home/phaedra/pscurlin.github.io/layouts/shortcodes/projectgrid.html -->
 {{ $type := .Get "type" | default "project" }}
-{{ $dir := .Get "dir" | default "archive" }}
+{{ $dir := .Get "dir" | default "past-work" }}
 
 {{/* Get all pages in the given directory */}}
 {{ $pagesInDir := where .Site.RegularPages "File.Dir" "eq" (printf "%s/" $dir) }}

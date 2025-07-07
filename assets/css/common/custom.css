@@ -37,8 +37,6 @@ a[href="/abstracts/"]:hover {
   text-overflow: unset !important;
 }
 
-
-
 .main {
     max-width: calc(var(--main-width) + var(--gap) * 3.5) !important;
 }
@@ -67,6 +65,34 @@ a[href="/abstracts/"]:hover {
     justify-content: center;
     min-height: 320px;
     margin: var(--gap) 0 calc(var(--gap) * 0.5);
+}
+
+.home-info > div {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+@media (max-width: 40rem) {
+  .home-info > div {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+  .home-info img {
+    margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .home-info .entry-content {
+      margin-top: -3rem;
+  }
+
+  .home-info {
+    margin-bottom: 2rem;
+  }
+
 }
 
 .home-info .entry-header {
@@ -142,6 +168,19 @@ nav.nav a:hover {
 
 .breadcrumbs a:hover {
   text-decoration: underline !important;
+}
+
+@media (max-width: 40rem) {
+  h1, .content h1, .post-title {
+    margin-top: 1rem;
+  }
+}
+@media (max-width: 40rem) {
+  .home-info .entry-content {
+    margin: -3rem 0 0 0;
+    font-size: 16px;
+    -webkit-line-clamp: 3;
+  }
 }
 
 

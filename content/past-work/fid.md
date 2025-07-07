@@ -6,14 +6,15 @@ hiddenInHomeList: true
 start: 2021-09-01
 end: 2022-05-01
 type: "project"
+header: "Past Work"
 ---
 
 {{< subtitle >}}
 {{< daterange >}}
 
 {{< carousel
-    "/img/fid.png|FID Frequency Extraction Engine board.|35%"
-    "/img/magneto.png|Our team's logo.|40%"
+    "/img/fid.png|FID Frequency Extraction Engine board."
+    "/img/magneto.png|Our team's logo."
 >}}
 
 
