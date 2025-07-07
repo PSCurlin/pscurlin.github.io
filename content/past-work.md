@@ -5,8 +5,8 @@ layout: project-grid
 
 ## Past Research
 
-{{< projectgrid kind="research" >}}
+{{< projectgrid type="research" >}}
 
 ## Past Projects
 
-{{< projectgrid kind="project" >}}
+{{< projectgrid type="project" >}}

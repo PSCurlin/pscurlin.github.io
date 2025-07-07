@@ -4,7 +4,7 @@ tile: "/img/rover0.jpg"
 hiddenInHomeList: true
 start: 2018-09-01
 end: 2022-05-01
-kind: "project"
+type: "project"
 subtitle: Undergraduate Club
 ---
 

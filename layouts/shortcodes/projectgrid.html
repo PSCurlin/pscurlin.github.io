@@ -1,12 +1,12 @@
 <!-- filepath: /home/phaedra/pscurlin.github.io/layouts/shortcodes/projectgrid.html -->
-{{ $kind := .Get "kind" | default "project" }}
+{{ $type := .Get "type" | default "project" }}
 {{ $dir := .Get "dir" | default "archive" }}
 
 {{/* Get all pages in the given directory */}}
 {{ $pagesInDir := where .Site.RegularPages "File.Dir" "eq" (printf "%s/" $dir) }}
 
-{{/* Filter pages by custom param 'kind' */}}
-{{ $matches := where $pagesInDir "Params.kind" "eq" $kind }}
+{{/* Filter pages by custom param 'type' */}}
+{{ $matches := where $pagesInDir "Params.type" "eq" $type }}
 
 <div style="margin: 1.05rem 0;">
   <div class="project-grid">

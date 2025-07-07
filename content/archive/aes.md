@@ -5,7 +5,7 @@ hiddenInHomeList: true
 start: 2022-05-01
 end: 2025-03-01
 subtitle: "Graduate Research"
-kind: "research"
+type: "research"
 ---
 
 {{< subtitle >}}

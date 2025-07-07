@@ -5,7 +5,7 @@ tile: "/img/fid.png"
 hiddenInHomeList: true
 start: 2021-09-01
 end: 2022-05-01
-kind: "project"
+type: "project"
 ---
 
 {{< subtitle >}}
