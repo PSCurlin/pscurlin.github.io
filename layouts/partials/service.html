@@ -1,11 +1,11 @@
-{{ with site.GetPage "publications" }}
-<article class="entry publication-info">
+{{ with site.GetPage "service" }}
+<article class="entry">
     <header class="entry-header">
         <h1>{{ .Title | markdownify }}</h1>
     </header>
     <div style="display: flex; align-items: center; gap: 2rem;">
         <div class="entry-content" style="flex: 1;">
-            {{ .Content }}
+            {{ .Content }}           
         </div>
     </div>
 </article>
