@@ -63,6 +63,8 @@ params:
       url: https://www.linkedin.com/in/pscurlin/
     - name: orcid
       url: https://orcid.org/0000-0002-0915-3447
+    - name: googlescholar
+      url: https://scholar.google.com/citations?user=9ft0ziAAAAAJ&hl=en
     - name: github
       url: https://github.com/PSCurlin
   cover:
