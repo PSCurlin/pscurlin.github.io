@@ -4,7 +4,7 @@ title: "Abstracts & Posters"
 
 <!-- Three most recent -->
 
-**P. Curlin**, C. Chan, and T. Lehman, "S-box designs for an open-source AES ASIC​," Young Fellows Program in conjunction with the 60th ACM/IEEE Design Automation Conference (DAC), 2022.
+**P. Curlin**, C. Chan, and T. Lehman, "S-box designs for an open-source AES ASIC​," Young Fellows Program in conjunction with the 60th ACM/IEEE Design Automation Conference (DAC), 2023.
 {{< publinks
 >}}
 
