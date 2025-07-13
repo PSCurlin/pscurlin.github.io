@@ -1,6 +1,6 @@
 ---
 title: "About Me"
-image: "/img/curlin.png"
+image: "/img/curlin.jpg"
 ---
 
 I am a 3rd year PhD student in Electrical Engineering at the University of Colorado Boulder under the supervision of [Prof. Tamara Silbergleit Lehman](https://www.colorado.edu/faculty/lehmantamara/). My research focuses on creating and implementing security metrics for computer hardware systems.
