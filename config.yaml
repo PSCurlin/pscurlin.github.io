@@ -99,6 +99,11 @@ menu:
       url: /archive/
       weight: 3
       weight: 10
+    - identifier: Teaching
+      name: Teaching
+      url: /teaching/
+      weight: 3
+      weight: 10
 
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
