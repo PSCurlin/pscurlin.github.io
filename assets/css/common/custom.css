@@ -171,6 +171,12 @@ strong {
   /* color: #156dab; */
 }
 
+/* Dark mode bold text - slightly lighter */
+.dark b,
+.dark strong {
+  color: #b4b4b4;
+}
+
 /* Blue for About Me hyperlinks */
 .home-info .entry-content a,
 .about-links a {
