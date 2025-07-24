@@ -1,4 +1,15 @@
 .pub-page h2 {
   border-bottom: 1px solid var(--secondary);
   padding-bottom: .5rem;  
+  margin-top: 1rem;
+}
+
+/* Remove bottom margin if the next element is .pub-links */
+.pub-page p:has(+ .pub-links) {
+  margin-bottom: 0em;
+}
+
+.pub-page p {
+  margin-bottom: 0em;
+  display: block;
 }

@@ -2,28 +2,11 @@
     margin-bottom: 1.5rem !important;
 }
 
-.post-content p,
-.post-content br {
-  margin-bottom: 1em;
-  display: block;
-}
-
-/* Add spacing between paragraphs, but not before .pub-links */
-.post-content p {
-  /* margin-bottom: 1.5rem; */
-
-}
-
 .post-content {
     color: var(--secondary) !important;
     font-weight: 500;
     font-size: 16px;
 
-}
-
-/* Remove bottom margin if the next element is .pub-links */
-.post-content p:has(+ .pub-links) {
-  margin-bottom: 0em;
 }
 
 .post-content a {
@@ -39,7 +22,6 @@
   font-weight: 400;
   text-align: left;
 }
-
 
 /* Add underline to links on hover */
 .post-content a:hover {
