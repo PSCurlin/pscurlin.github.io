@@ -20,7 +20,7 @@ title: "Abstracts & Posters"
 
 ## 2021
 
-M. Bell, **P. Curlin**, M. Muniz, and J. Burns, "Construction of lunar radio astronomy telescopes leveraging low latency VR/AR teleoperation. NASA Exploration," Science Forum & European Lunar Symposium, 2021.
+M. Bell, **P. Curlin**, M. Muniz, and J. Burns, "Construction of lunar radio astronomy telescopes leveraging low latency VR/AR teleoperation," NASA Exploration Science Forum & European Lunar Symposium, 2021.
 {{< publinks
     lightning="https://www.youtube.com/watch?v=ig0pzOI9R2M"
 >}}
