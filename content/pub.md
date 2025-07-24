@@ -1,5 +1,6 @@
 ---
 title: "Publications"
+layout: "pub-page"
 ---
 
 ## 2025

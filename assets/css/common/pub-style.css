@@ -1,0 +1,4 @@
+.pub-page h2 {
+  border-bottom: 1px solid var(--secondary);
+  padding-bottom: .5rem;  
+}
