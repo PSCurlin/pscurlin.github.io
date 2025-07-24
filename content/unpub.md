@@ -1,6 +1,6 @@
 ---
 title: "Abstracts & Posters"
-
+layout: "pub-page"
 ---
 
 <!-- Full list of abstracts and posters -->
@@ -27,7 +27,7 @@ M. Bell, **P. Curlin**, M. Muniz, and J. Burns, "Construction of lunar radio ast
 
 ## 2020
 
-M. Bell, **P. Curlin**, and J. Burns, "Construction of lunar radio astronomy telescopes leveraging low latency VR/AR teleoperation," NASA Exploration Science Forum & European Lunar Symposium, 2020.
+M. Bell, **P. Curlin**, and J. Burns, "Construction of lunar radio astronomy telescopes leveraging low latency VR/AR teleoperation," NASA Exploration Science Forum, 2020.
 {{< publinks
     lightning="https://www.youtube.com/watch?v=-0TAmoyi7go"
     abstract="https://www.hou.usra.edu/meetings/lunarsurface2020/pdf/6008.pdf"
