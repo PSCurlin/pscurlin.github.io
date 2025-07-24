@@ -2,6 +2,10 @@ a[href="/abstracts/"]:hover {
   text-decoration: underline;
 }
 
+h1 {
+  font-size:1.75rem;
+}
+
 h3, h2 {
   margin-bottom: 0.5rem;
 }
