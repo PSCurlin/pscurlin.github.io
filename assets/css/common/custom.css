@@ -233,4 +233,16 @@ nav.nav a:hover {
   color: #4a9eff;
 }
 
+/* Lines under year headers only for publication info pages */
+.publication-info h2 {
+  border-bottom: 1.5px solid #156dab;
+  padding-bottom: 0.25rem;
+  margin-top: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Dark mode lines for publication pages */
+.dark .publication-info h2 {
+  border-bottom-color: #4a9eff;
+}
 

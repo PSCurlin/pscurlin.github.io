@@ -1,26 +1,31 @@
 ---
 title: "Abstracts & Posters"
+
 ---
 
 <!-- Full list of abstracts and posters -->
 
+## 2023
+
 **P. Curlin**, C. Chan, and T. Lehman, "S-box designs for an open-source AES ASIC," Young Fellows Program in conjunction with the 60th ACM/IEEE Design Automation Conference (DAC), 2023.
-{{< publinks
->}}
+
+## 2022
 
 **P. Curlin**, C. Chan, and T. Lehman, "An ASIC implementation of an open-source AES engine," 8th Career Workshop for Inclusion and Diversity in Computer Architecture in conjunction with the 55th IEEE/ACM International Symposium on Microarchitecture (MICRO-55), 2022.
-{{< publinks
->}}
 
 **P. Curlin**, M. Muniz, M. Bell, A. Muniz, and J. Burns, "Virtual reality digital twin and environment for troubleshooting lunar-based infrastructure assembly failures," 5th International Workshop on Virtual, Augmented, and Mixed-Reality for Human-Robot Interactions for HRI in conjunction with the 17th ACM/IEEE International Conference on Human-Robot Interaction (HRI), 2022.
 {{< publinks
     extended="https://openreview.net/pdf?id=rgblc7FbRyc"
 >}}
 
+## 2021
+
 M. Bell, **P. Curlin**, M. Muniz, and J. Burns, "Construction of lunar radio astronomy telescopes leveraging low latency VR/AR teleoperation. NASA Exploration," Science Forum & European Lunar Symposium, 2021.
 {{< publinks
     lightning="https://www.youtube.com/watch?v=ig0pzOI9R2M"
 >}}
+
+## 2020
 
 M. Bell, **P. Curlin**, and J. Burns, "Construction of lunar radio astronomy telescopes leveraging low latency VR/AR teleoperation," NASA Exploration Science Forum & European Lunar Symposium, 2020.
 {{< publinks

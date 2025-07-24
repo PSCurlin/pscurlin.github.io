@@ -10,7 +10,7 @@
 
 /* Add spacing between paragraphs, but not before .pub-links */
 .post-content p {
-  margin-bottom: 1.5rem;
+  /* margin-bottom: 1.5rem; */
 
 }
 
@@ -55,3 +55,5 @@
   color: #66b3ff; /* Even lighter on hover */
   text-decoration: underline;
 }
+
+
