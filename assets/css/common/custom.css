@@ -207,4 +207,24 @@ nav.nav a:hover {
   }
 }
 
+/* Dark mode color adjustments */
+.dark .pub-links a:hover {
+  color: #4a9eff !important;
+}
+
+.dark .home-info .entry-content a,
+.dark .about-links a {
+  color: #4a9eff;
+}
+
+.dark .home-info .entry-content a:hover,
+.dark .about-links a:hover {
+  color: #66b3ff;
+}
+
+.dark header.header a:hover,
+.dark nav.nav a:hover {
+  color: #4a9eff;
+}
+
 

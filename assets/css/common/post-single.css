@@ -39,3 +39,20 @@
   font-weight: 400;
   text-align: left;
 }
+
+
+/* Add underline to links on hover */
+.post-content a:hover {
+  text-decoration: underline;
+
+}
+
+/* Dark mode link colors */
+.dark .post-content a {
+  color: #4a9eff; /* Lighter blue for dark mode */
+}
+
+.dark .post-content a:hover {
+  color: #66b3ff; /* Even lighter on hover */
+  text-decoration: underline;
+}
