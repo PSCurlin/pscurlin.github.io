@@ -8,6 +8,10 @@ layout: "pub-page"
 ## 2023
 
 **P. Curlin**, C. Chan, and T. Lehman, "S-box designs for an open-source AES ASIC," Young Fellows Program in conjunction with the 60th ACM/IEEE Design Automation Conference (DAC), 2023.
+{{< publinks
+    poster="/files/sbox-dac23.pdf"
+>}}
+
 
 ## 2022
 
