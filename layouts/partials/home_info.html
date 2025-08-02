@@ -5,7 +5,7 @@
     </header>
     <div style="display: flex; align-items: center; gap: 2rem;">
         {{ with .Params.image }}
-        <img src="{{ . | relURL }}" alt="Profile image"
+        <img rel="preconnect" src="{{ . | relURL }}" alt="phaedra"
              style="width: 12rem; height: 12rem; object-fit: cover; border-radius: 100%; flex-shrink: 0; margin-bottom: 2rem;">
         {{ end }}
         <div class="entry-content" style="flex: 1;">

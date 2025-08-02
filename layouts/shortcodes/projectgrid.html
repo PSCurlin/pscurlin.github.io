@@ -11,7 +11,7 @@
   <div class="project-grid">
     {{ range sort $matches "Params.start" "desc" }}
       <a href="{{ .RelPermalink }}" class="project-card">
-        <img src="{{ .Params.tile }}" alt="{{ .Title }}" />
+        <img rel="preconnect" src="{{ .Params.tile }}" alt="{{ .Title }}" />
         <div class="project-overlay">
           <div>
             <h3>{{ .Title }}</h3>
