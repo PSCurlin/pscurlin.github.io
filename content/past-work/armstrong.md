@@ -1,5 +1,5 @@
 ---
-title: "Telerobotics"
+title: "Lunar Telerobotics"
 tile: "/img/armstrong0.png"
 hiddenInHomeList: true
 start: 2020-03-01
