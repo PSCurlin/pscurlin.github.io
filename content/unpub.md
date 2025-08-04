@@ -19,14 +19,14 @@ layout: "pub-page"
 **P. Curlin**, M. Muniz, A. Muniz, and J. Burns, "Troubleshooting Lunar Rover Failures: A Virtual Reality Digital Twin
 and Environment," *NASA Exploration Science Forum*, Boulder, CO, Jul. 2022.
 
-**P. Curlin**, M. Muniz, M. Bell, A. Muniz, and J. Burns, "Virtual reality digital twand environment for troubleshooting lunar-based infrastructure assembly failures," *5th International Workshop on Virtual, Augmented, and Mixed-Reality for Human-Robot Interactions for HRI (VAM-HRI) in conjunction with the 17th ACM/IEEE International Conference on Human-Robot Interaction (HRI)*, Online, Mar. 2022.
+**P. Curlin**, M. Muniz, M. Bell, A. Muniz, and J. Burns, "Virtual reality digital twand environment for troubleshooting lunar-based infrastructure assembly failures," in *Proceedings of the 5th International Workshop on Virtual, Augmented, and Mixed-Reality for Human-Robot Interactions for HRI (VAM-HRI) in conjunction with the 17th ACM/IEEE International Conference on Human-Robot Interaction (HRI)*, Online, Mar. 2022.
 {{< publinks
     extended="/abstracts/telerobotics-extended-vamhri22.pdf"
 >}}
 
 ## 2021
 
-M. Bell, **P. Curlin**, M. Muniz, and J. Burns, "Construction of lunar radio astronomy telescopes leveraging low latency VR/AR teleoperation," *NASA Exploration Science Forum & European Lunar Symposium*, 2021.
+M. Bell, **P. Curlin**, M. Muniz, and J. Burns, "Construction of lunar radio astronomy telescopes leveraging low latency VR/AR teleoperation," *NASA Exploration Science Forum & European Lunar Symposium*, Online, 2021.
 {{< publinks
     lightning="https://www.youtube.com/watch?v=ig0pzOI9R2M"
     poster="/posters/telerobotics-poster-nesf2021.pdf"
@@ -52,8 +52,7 @@ application," *NASA Exploration Science Forum*, Online, Jul. 2020.
     lightning="https://www.youtube.com/watch?v=5Pz-iAtkERk"
 >}} 
 
-A. Kumar, M. Bell, **P. Curlin**, and J. Burns, "Lunar telerobotic assembly recovery using cyber-physical training," in
-*15th Lunar and Small Bodies Graduate Forum*, Online, Jul. 2020.
+A. Kumar, M. Bell, **P. Curlin**, and J. Burns, "Lunar telerobotic assembly recovery using cyber-physical training," *15th Lunar and Small Bodies Graduate Forum*, Online, Jul. 2020.
 {{< publinks
     abstract="/abstracts/telerobotics-abstract-lungradcon20.pdf"
 >}} 
