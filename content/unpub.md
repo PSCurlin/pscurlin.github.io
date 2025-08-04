@@ -39,7 +39,7 @@ M. Bell, **P. Curlin**, and J. Burns, “Construction of lunar radio astronomy t
 VR/AR teleoperation,” *Annual Meeting of the Lunar Exploration Analysis Group (LEAG)*, Online, Sep. 2020.
 {{< publinks
     lightning="https://www.youtube.com/watch?v=-0TAmoyi7go"
-    poster="posters/telerobotics-poster-leag20.pdf"
+    poster="/posters/telerobotics-poster-leag20.pdf"
 >}} 
 
 M. Bell, **P. Curlin**, and J. Burns, "Construction of lunar radio astronomy telescopes leveraging low-latency
