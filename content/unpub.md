@@ -14,12 +14,12 @@ layout: "pub-page"
 
 ## 2022
 
-**P. Curlin**, C. Chan, and T. Lehman, "An ASIC implementation of an open-source AES engine," *8th Career Workshop for Inclusion and Diversity Computer Architecture conjunction with the 55th IEEE/ACM International Symposium on Microarchitecture (MICRO-55)*, Chicago, IL, 2022.
+**P. Curlin**, C. Chan, and T. Lehman, "An ASIC implementation of an open-source AES engine," *8th Career Workshop for Inclusion and Diversity Computer Architecture (CWIDCA) conjunction with the 55th IEEE/ACM International Symposium on Microarchitecture (MICRO-55)*, Chicago, IL, 2022.
 
 **P. Curlin**, M. Muniz, A. Muniz, and J. Burns, "Troubleshooting Lunar Rover Failures: A Virtual Reality Digital Twin
 and Environment," *NASA Exploration Science Forum*, Boulder, CO, Jul. 2022.
 
-**P. Curlin**, M. Muniz, M. Bell, A. Muniz, and J. Burns, "Virtual reality digital twand environment for troubleshooting lunar-based infrastructure assembly failures," *5th International Workshop on Virtual, Augmented, and Mixed-Reality for Human-Robot Interactions for HRI conjunction with the 17th ACM/IEEE International Conference on Human-Robot Interaction (HRI)*, Online, Mar. 2022.
+**P. Curlin**, M. Muniz, M. Bell, A. Muniz, and J. Burns, "Virtual reality digital twand environment for troubleshooting lunar-based infrastructure assembly failures," *5th International Workshop on Virtual, Augmented, and Mixed-Reality for Human-Robot Interactions for HRI (VAM-HRI) in conjunction with the 17th ACM/IEEE International Conference on Human-Robot Interaction (HRI)*, Online, Mar. 2022.
 {{< publinks
     extended="/abstracts/telerobotics-extended-vamhri22.pdf"
 >}}
@@ -29,6 +29,7 @@ and Environment," *NASA Exploration Science Forum*, Boulder, CO, Jul. 2022.
 M. Bell, **P. Curlin**, M. Muniz, and J. Burns, "Construction of lunar radio astronomy telescopes leveraging low latency VR/AR teleoperation," *NASA Exploration Science Forum & European Lunar Symposium*, 2021.
 {{< publinks
     lightning="https://www.youtube.com/watch?v=ig0pzOI9R2M"
+    poster="/posters/telerobotics-poster-nesf2021.pdf"
 >}}
 
 ## 2020
