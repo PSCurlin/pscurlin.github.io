@@ -19,7 +19,7 @@ layout: "pub-page"
 **P. Curlin**, M. Muniz, A. Muniz, and J. Burns, "Troubleshooting Lunar Rover Failures: A Virtual Reality Digital Twin
 and Environment," *NASA Exploration Science Forum*, Boulder, CO, Jul. 2022.
 {{< publinks
-    abstract="telerobotics-abstract-nesf22.pdf"
+    abstract="/abstracts/telerobotics-abstract-nesf22.pdf"
 >}}
 
 **P. Curlin**, M. Muniz, M. Bell, A. Muniz, and J. Burns, "Virtual reality digital twand environment for troubleshooting lunar-based infrastructure assembly failures," in *5th International Workshop on Virtual, Augmented, and Mixed-Reality for Human-Robot Interactions for HRI (VAM-HRI) in conjunction with the 17th ACM/IEEE International Conference on Human-Robot Interaction (HRI)*, Online, Mar. 2022.
