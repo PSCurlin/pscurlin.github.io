@@ -9,6 +9,11 @@
   margin-bottom: 0em;
 }
 
+/* Reduce spacing between the citation and publinks */
+.pub-page p:has(+ .pub-links) {
+  margin-bottom: 0.25em;
+}
+
 .pub-page p {
   margin-bottom: 1em;
   display: block;
@@ -18,4 +23,19 @@
   list-style-type: "";
   list-style: none;
   padding-left: 0rem;
+}
+
+/* Reduce spacing for list items without publinks */
+.pub-page li:not(:has(+ .pub-links)) {
+  margin-bottom: 0.5em;
+}
+
+/* Normal spacing for list items with publinks */
+.pub-page li:has(+ .pub-links) {
+  margin-bottom: 1em;
+}
+
+/* Add spacing after publinks */
+.pub-page .pub-links {
+  margin-bottom: 1.5em;
 }

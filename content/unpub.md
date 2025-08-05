@@ -15,9 +15,6 @@ layout: "pub-page"
 ## 2022
 
 - **P. Curlin**, C. Chan, and T. Lehman, "An ASIC implementation of an open-source AES engine," *8th Career Workshop for Inclusion and Diversity Computer Architecture (CWIDCA) in conjunction with the 55th IEEE/ACM International Symposium on Microarchitecture (MICRO-55)*, Chicago, IL, 2022.
-{{< publinks
-
->}}
 
 - **P. Curlin**, M. Muniz, A. Muniz, and J. Burns, "Troubleshooting Lunar Rover Failures: A Virtual Reality Digital Twin
 and Environment," *NASA Exploration Science Forum*, Boulder, CO, Jul. 2022.
