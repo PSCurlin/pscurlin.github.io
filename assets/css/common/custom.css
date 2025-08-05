@@ -245,3 +245,12 @@ nav.nav a:hover {
 .dark .publication-info h2 {
   border-bottom-color: #4a9eff;
 }
+
+.recent-pubs-no-bullets {
+  list-style: none;
+  padding-left: 0rem;
+}
+
+.recent-pubs-no-bullets li::before {
+  content: none;
+}

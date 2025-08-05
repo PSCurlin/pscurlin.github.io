@@ -13,3 +13,8 @@
   margin-bottom: 1em;
   display: block;
 }
+
+.pub-page ul {
+  list-style-type: "";
+  padding-left: 0rem;
+}

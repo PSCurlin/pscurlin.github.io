@@ -1,15 +1,13 @@
-{{ with site.GetPage "unpublished" }}
-<article class="entry publication-info" >
-    <header class="entry-header">
-        <h1>{{ .Title | markdownify }}</h1>
-    </header>
-    <div style="display: flex; align-items: center; gap: 2rem;">
-        <div class="entry-content" style="flex: 1;">
-            {{ .Content }}          
-        </div>
+<article class="entry publication-info">
+<header class="entry-header">
+    <h1>Abstracts & Posters</h1>
+</header>
+<div style="display: flex; align-items: center; gap: 2rem;">
+    <div class="entry-content" style="flex: 1;">
+    {{ partial "recent-pubs.html" (dict "page" "unpub" "count" 3) }}
     </div>
+</div>
     <div class="more-link" style="margin-top: -0.5em;">
-    <a href="/unpub/">More &rarr;</a>
-    </div>
+<a href="/unpub/">More &rarr;</a>
+</div>
 </article>
-{{ end }}

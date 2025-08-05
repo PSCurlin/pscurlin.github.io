@@ -1,0 +1,25 @@
+{{ $page := .page | default "pub" }}
+{{ $count := .count | default 3 | int }}
+{{ $targetPage := site.GetPage $page }}
+
+{{ if $targetPage }}
+  {{ $content := $targetPage.Content }}
+  {{ $items := split $content "<li>" }}
+  {{ $processed := 0 }}
+
+  {{ range $index, $item := $items }}
+    {{ if and (ne $index 0) (lt $processed $count) }}
+      {{ $cleanItem := replaceRE `<h2[^>]*>.*?</h2>` "" $item }}
+      {{ $cleanItem = trim $cleanItem " \n\r\t" }}
+
+      {{ if gt (len $cleanItem) 10 }}
+        <div class="pub-entry">
+          {{ $cleanItem | safeHTML }}
+        </div>
+        {{ $processed = add $processed 1 }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ else }}
+  <p>Could not find page: <code>{{ $page }}</code>.</p>
+{{ end }}
