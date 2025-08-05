@@ -16,5 +16,6 @@
 
 .pub-page ul {
   list-style-type: "";
+  list-style: none;
   padding-left: 0rem;
 }
