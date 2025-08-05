@@ -7,14 +7,14 @@ layout: "pub-page"
 
 ## 2023
 
-- **P. Curlin**, C. Chan, and T. Lehman, "S-box designs for an open-source AES ASIC," *Young Fellows Program in conjunction with the 60th ACM/IEEE Design Automation Conference (DAC)*, San Fransisco, CA, 2023.
+- **P. Curlin**, C. Chan, and T. Lehman, "S-box designs for an open-source AES ASIC," *Young Fellows Program in conjunction with the 60th ACM/IEEE Design Automation Conference (DAC)*, San Fransisco, CA, Jul. 2023.
 {{< publinks
     poster="/posters/sbox-poster-dac23.pdf"
 >}}
 
 ## 2022
 
-- **P. Curlin**, C. Chan, and T. Lehman, "An ASIC implementation of an open-source AES engine," *8th Career Workshop for Inclusion and Diversity Computer Architecture (CWIDCA) in conjunction with the 55th IEEE/ACM International Symposium on Microarchitecture (MICRO-55)*, Chicago, IL, 2022.
+- **P. Curlin**, C. Chan, and T. Lehman, "An ASIC implementation of an open-source AES engine," *8th Career Workshop for Inclusion and Diversity Computer Architecture (CWIDCA) in conjunction with the 55th IEEE/ACM International Symposium on Microarchitecture (MICRO-55)*, Chicago, IL, Oct. 2022.
 
 - **P. Curlin**, M. Muniz, A. Muniz, and J. Burns, "Troubleshooting Lunar Rover Failures: A Virtual Reality Digital Twin
 and Environment," *NASA Exploration Science Forum*, Boulder, CO, Jul. 2022.
@@ -30,7 +30,7 @@ and Environment," *NASA Exploration Science Forum*, Boulder, CO, Jul. 2022.
 
 ## 2021
 
-- M. Bell, **P. Curlin**, M. Muniz, and J. Burns, "Construction of lunar radio astronomy telescopes leveraging low latency VR/AR teleoperation," *NASA Exploration Science Forum & European Lunar Symposium*, Online, 2021.
+- M. Bell, **P. Curlin**, M. Muniz, and J. Burns, "Construction of lunar radio astronomy telescopes leveraging low latency VR/AR teleoperation," *NASA Exploration Science Forum & European Lunar Symposium*, Online, Jul. 2021.
 {{< publinks
     abstract="/abstracts/telerobotics-abstract-nesf21.pdf"
     lightning="https://www.youtube.com/watch?v=ig0pzOI9R2M"
