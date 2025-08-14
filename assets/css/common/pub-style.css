@@ -49,7 +49,12 @@
 .pub-title {
     font-size: 1em;
     color: #156dab !important;
-  font-weight: bold;
+    font-weight: bold;
+}
+
+/* Dark mode version */
+.dark .pub-title {
+    color: #4a9eff !important;
 }
 
 .pub-title strong {
