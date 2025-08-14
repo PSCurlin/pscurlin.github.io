@@ -37,5 +37,45 @@
 
 /* Add spacing after publinks */
 .pub-page .pub-links {
-  margin-bottom: 1.5em;
+  margin-top: -0.25em;
+  margin-bottom: 1em;
+  font-size: 0.955em;
+}
+
+.pub-entry {
+    line-height: 1.6;
+}
+
+.pub-title {
+    font-size: 1em;
+    color: #156dab !important;
+  font-weight: bold;
+}
+
+.pub-title strong {
+    color: var(--primary);
+}
+
+.pub-authors {
+    font-size: 0.9em;
+}
+
+.pub-venue {
+    font-size: 0.9em;
+    color: var(--secondary);
+}
+
+.pub-type strong {
+    color: #4a90e2;
+    font-weight: 600;
+    font-size: 0.9em;
+}
+
+.pub-links {
+    margin-top: 0.5em;
+}
+
+.pub-date {
+    font-size: 0.9em;
+    color: var(--secondary);
 }
