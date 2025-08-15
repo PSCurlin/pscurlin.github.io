@@ -47,7 +47,7 @@ h3, h2 {
 }
 
 .main {
-    max-width: calc(var(--main-width) + var(--gap) * 5) !important;
+    max-width: calc(var(--main-width) + var(--gap) * 7) !important;
 }
 
 .social-icons a:hover svg,

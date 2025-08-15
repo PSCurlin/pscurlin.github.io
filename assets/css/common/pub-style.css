@@ -39,7 +39,7 @@
 .pub-page .pub-links {
   margin-top: -0.25em;
   margin-bottom: 1em;
-  font-size: 0.955em;
+  font-size: 1.0em;
 }
 
 .pub-entry {
@@ -47,7 +47,7 @@
 }
 
 .pub-title {
-    font-size: 1em;
+    font-size: 1.05em;
     color: #156dab !important;
     font-weight: bold;
 }
@@ -62,18 +62,18 @@
 }
 
 .pub-authors {
-    font-size: 0.9em;
+    font-size: 1.0em;
 }
 
 .pub-venue {
-    font-size: 0.9em;
+    font-size: 1.0em;
     color: var(--secondary);
 }
 
 .pub-type strong {
     color: #4a90e2;
     font-weight: 600;
-    font-size: 0.9em;
+    font-size: 1.0em;
 }
 
 .pub-links {
@@ -81,6 +81,6 @@
 }
 
 .pub-date {
-    font-size: 0.9em;
+    font-size: 1.0em;
     color: var(--secondary);
 }
