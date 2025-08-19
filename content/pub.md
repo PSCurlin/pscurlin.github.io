@@ -24,6 +24,17 @@ layout: "pub-page"
 ## 2025
 
 - {{< pubentry 
+    title="CASM: A Generalizable and Accessible Security Metric to Evaluate Security of Cache Architectures"
+    authors="**P. Curlin**, T. Lehman"
+    venue="IEEE International Symposium on Workload Characterization (IISWC)"
+    date="Oct. 2025"
+>}}
+{{< publinks
+    code="https://github.com/Boulder-Computer-Architecture-Lab/casm"
+>}}
+{{< /pubentry >}}
+
+- {{< pubentry 
     title="A Survey of Hardware-Based AES SBoxes: Area, Performance, and Security"
     authors="**P. Curlin**, J. Heiges, C. Chan, T. Lehman"
     venue="ACM Computing Surveys"
@@ -40,7 +51,7 @@ layout: "pub-page"
 - {{< pubentry 
     title="Baobab Merkle Tree for Efficient Secure Memory"
     authors="S. Thomas, K. Workneh, A-T. Ishimwe, Z. McKevitt, **P. Curlin**, R. I. Bahar, J. Izraelevitz, T. Lehman"
-    venue="IEEE Computer Architecture Letters"
+    venue="IEEE Computer Architecture Letters (CAL)"
     date="Jan. 2024"
 >}}
 {{< publinks
