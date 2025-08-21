@@ -42,7 +42,7 @@ layout: "pub-page"
     title="An ASIC implementation of an open-source AES engine"
     authors="**P. Curlin**, C. Chan, T. Lehman"
     venue="Career Workshop for Inclusion and Diversity Computer Architecture (CWIDCA) in conjunction with the IEEE/ACM International Symposium on Microarchitecture (MICRO)"
-    location="San Francisco, CA"
+    location="Chicago, IL"
     date="Jul. 2022"
 >}}
 {{< /pubentry >}}
