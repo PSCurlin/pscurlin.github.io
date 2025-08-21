@@ -70,6 +70,7 @@ layout: "pub-page"
 >}}
 {{< publinks
     extended="/abstracts/telerobotics-extended-vamhri22.pdf"
+    lightning="https://youtu.be/uUlXYXrLX4M?t=4985"
 >}}
 {{< /pubentry >}}
 
