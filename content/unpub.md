@@ -49,7 +49,7 @@ layout: "pub-page"
 
 
 - {{< pubentry 
-    title="Troubleshooting Lunar Rover Failures: A Virtual Reality Digital Twin and Environment"
+    title="Troubleshooting lunar rover failures: a virtual reality digital twin and environment"
     authors="**P. Curlin**, M. Muniz, A. Muniz, J. Burns"
     venue="NASA Exploration Science Forum"
     location="Boulder, CO"
@@ -62,9 +62,9 @@ layout: "pub-page"
 {{< /pubentry >}}
 
 - {{< pubentry 
-    title="Troubleshooting Lunar Rover Failures: A Virtual Reality Digital Twin and Environment"
+    title="Virtual Reality Digital Twin and Environment for Troubleshooting Lunar-based Infrastructure Assembly Failures"
     authors="**P. Curlin**, M. Muniz, A. Muniz, J. Burns"
-    venue="International Workshop on Virtual, Augmented, and Mixed-Reality for Human-Robot Interactions for HRI (VAM-HRI)"
+    venue="International Workshop on Virtual, Augmented, and Mixed-Reality for Human-Robot Interactions for HRI (VAM-HRI) in conjunction with the IEEE/ACM International Conference on Human-Robot Interaction (HRI)"
     location="Online"
     date="Mar. 2022"
 >}}
