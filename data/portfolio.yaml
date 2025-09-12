@@ -1,0 +1,11 @@
+projects:
+  - id: metrics
+    title: Cache Security Metrics
+    summary: How do we know which cache is more secure? We design and implement metrics to understand and compare the security of different cache architectures.
+    image: "/img/metric.png"
+    image_dark: "/img/metric-dark.png"
+  - id: caches
+    title: Secure Cache Architectures
+    summary: Secure cache architectures have yet to be adopted in real hardware. We explore the challenges and potential solutions for implementing these architectures in practice.
+    image: "/img/secure-cache.png"
+    image_dark: "/img/secure-cache-dark.png"

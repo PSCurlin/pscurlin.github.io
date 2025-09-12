@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/assets/css/common/projects.css">
+  <!-- Include Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    .projects {
+      max-width: 100%;
+      margin: auto;
+      position: relative;
+      overflow: visible;
+    }
+
+    .projects h2 {
+      text-align: center;
+      font-size: 1em;
+      margin-bottom: 1em;
+    }
+
+    .projects-carousel {
+      position: relative;
+      max-width: 84.5%;
+      margin: auto;      
+    }
+
+    .carousel-track {
+      overflow: hidden;
+      width: 100%;
+      position: relative;
+    }
+
+    .carousel-track-inner {
+      display: flex;
+      transition: transform 0.75s ease-in-out;
+      width: 100%;
+    }
+
+    .project-slide {
+      width: 100%;
+      flex-shrink: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .project-slide-inner {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 1em;
+      width: 100%;
+      margin: auto;
+    }
+
+    .project-slide-img {
+      flex: 1 1 30%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .project-image {
+      object-fit: cover;
+    }
+
+    .project-slide-info {
+      flex: 2 1 70%;
+      padding-left: 1em;
+      padding-right: 0em;
+      display: flex;
+      align-items: center;
+    }
+
+    .project-slide-card {
+      width: 100%;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.20);
+      border: 2px solid #156dab;
+    }
+
+    .project-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 0.5em;
+      margin-left: 0.5em;
+    }
+
+    .project-summary, .project-details {
+      margin: 1em;
+      color: var(--secondary) !important;
+      line-height: 1.5;
+    }
+
+    .project-link {
+      color: #156dab;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    /* Updated carousel arrow styles */
+    .carousel-prev,
+    .carousel-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--secondary);
+      border: none;
+      width: 3em;
+      height: 3em;
+      font-size: 3rem;
+      cursor: pointer;
+      z-index: 10;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .carousel-prev:hover,
+    .carousel-next:hover {
+      color: #156dab;  /* Change to the accent color on hover */
+    }
+
+    .carousel-prev {
+      left: -6rem;
+    }
+
+    .carousel-next {
+      right: -6rem;
+    }
+
+    /* Font Awesome arrows for a better visual appeal */
+    .carousel-prev::before,
+    .carousel-next::before {
+      font-family: 'Font Awesome 5 Free';  /* Use Font Awesome for arrows */
+      font-weight: 900;
+    }
+
+    .carousel-prev::before {
+      content: '\f104';  /* Left arrow (←) */
+    }
+
+    .carousel-next::before {
+      content: '\f105';  /* Right arrow (→) */
+    }
+
+    /* Optionally, add a subtle shadow or animation for better clarity */
+    .carousel-prev,
+    .carousel-next {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @media screen and (max-width: 768px) {
+      .project-slide-inner {
+        flex-direction: column;
+        align-items: center;
+        padding: 1em;
+      }
+
+      .project-slide-info {
+        padding-left: 0;
+        margin-top: 1em;
+      }
+
+      .project-title {
+        text-align: center;
+      }
+
+    .carousel-prev {
+      left: -5rem;
+    }
+
+    .carousel-next {
+      right: -5rem;
+    }
+
+    h2 {
+      text-align: center;
+    }
+    
+    }
+  </style>
+</head>
+<body>
+<h2>Research Projects</h2>
+<section class="projects">
+  <div class="projects-carousel">
+    <button class="carousel-prev"></button>
+    <div class="carousel-track">
+      <div class="carousel-track-inner">
+        {{ range $i, $p := .Site.Data.portfolio.projects }}
+        <div class="project-slide">
+          <div class="project-slide-inner">
+            <div class="project-slide-img">
+              {{ if $p.image }}
+              <img class="project-image" src="{{ $p.image }}" data-light="{{ $p.image }}" data-dark="{{ $p.image_dark }}" alt="{{ $p.title }} project image" />
+              {{ end }}
+            </div>
+            <div class="project-slide-info">
+              <div class="project-slide-card">
+                <h3 class="project-title">{{ $p.title }}</h3>
+                <p class="project-summary">{{ $p.summary }}</p>
+                <p class="project-details">{{ $p.details }}</p>
+                {{ if $p.url }}
+                <a href="{{ $p.url }}" target="_blank" class="project-link">[project link]</a>
+                {{ end }}
+              </div>
+            </div>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+    <button class="carousel-next"></button>
+  </div>
+</section>
+
+<script>
+  (function () {
+    const track = document.querySelector('.carousel-track-inner');
+    const slides = document.querySelectorAll('.project-slide');
+    const prevBtn = document.querySelector('.carousel-prev');
+    const nextBtn = document.querySelector('.carousel-next');
+    let index = 0;
+    let autoplayInterval = null;
+
+    function updateCarousel() {
+      track.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    function nextSlide() {
+      index = (index + 1) % slides.length;
+      updateCarousel();
+    }
+
+    function prevSlide() {
+      index = (index === 0) ? slides.length - 1 : index - 1;
+      updateCarousel();
+    }
+
+    function startAutoplay() {
+      autoplayInterval = setInterval(nextSlide, 12000); // museconds
+    }
+
+    function resetAutoplay() {
+      clearInterval(autoplayInterval);
+      startAutoplay();
+    }
+
+    prevBtn.addEventListener('click', () => {
+      prevSlide();
+      resetAutoplay();
+    });
+
+    nextBtn.addEventListener('click', () => {
+      nextSlide();
+      resetAutoplay();
+    });
+
+    updateCarousel();
+    startAutoplay();
+
+    // Use .dark class on body to swap images
+    function updateProjectImagesByClass() {
+      const isDark = document.body.classList.contains('dark');
+      document.querySelectorAll('.project-image').forEach(img => {
+        if (isDark && img.dataset.dark) {
+          img.src = img.dataset.dark;
+        } else {
+          img.src = img.dataset.light;
+        }
+      });
+    }
+    updateProjectImagesByClass();
+    // Observe class changes on body
+    const observer = new MutationObserver(updateProjectImagesByClass);
+    observer.observe(document.body, { attributes: true, attributeFilter: ['class'] });
+  })();
+</script>
+
+</body>
+</html>

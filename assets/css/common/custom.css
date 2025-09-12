@@ -2,6 +2,7 @@ a[href="/abstracts/"]:hover {
   text-decoration: underline;
 }
 
+
 h1 {
   font-size:1.75rem;
 }
@@ -174,7 +175,7 @@ strong {
 /* Dark mode bold text - slightly lighter */
 .dark b,
 .dark strong {
-  color: #b4b4b4;
+  color: #d3d3d3;
 }
 
 /* Blue for About Me hyperlinks */
@@ -254,3 +255,5 @@ nav.nav a:hover {
 .recent-pubs-no-bullets li::before {
   content: none;
 }
+
+
