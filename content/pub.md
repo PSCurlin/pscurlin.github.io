@@ -30,7 +30,8 @@ layout: "pub-page"
     date="Oct. 2025"
 >}}
 {{< publinks
-    code="https://github.com/Boulder-Computer-Architecture-Lab/casm"
+    paper="https://ieeexplore.ieee.org/abstract/document/11242098"
+    code="https://zenodo.org/records/16877763"
 >}}
 {{< /pubentry >}}
 
