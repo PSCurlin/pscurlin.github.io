@@ -22,6 +22,19 @@ layout: "pub-page"
 >}}
 {{< /pubentry >}} -->
 
+## 2026
+- {{< pubentry 
+    title="CASM: A Generalizable and Accessible Security Metric to Evaluate Security of Cache Architectures"
+    authors="**P. Curlin**, T. Lehman"
+    venue="CRA-WP Grad Cohort Workshop"
+    location="Seattle, WA"
+    date="Mar. 2026"
+>}}
+{{< publinks
+    poster="/posters/casm-poster-crawp26.pdf"
+>}}
+{{< /pubentry >}}
+
 ## 2023
 
 - {{< pubentry 
