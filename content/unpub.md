@@ -24,6 +24,18 @@ layout: "pub-page"
 
 ## 2026
 - {{< pubentry 
+    title="Open-Source Cache Architectures in Chipyard "
+    authors="**P. Curlin**, T. Lehman"
+    venue="Open-Source Computer Architecture Workshop"
+    location="Raleigh, NC"
+    date="Jun. 2026"
+>}}
+{{< publinks
+    slides="/pres/caches-pres-oscar26.pdf"
+>}}
+{{< /pubentry >}}
+
+- {{< pubentry 
     title="CASM: A Generalizable and Accessible Security Metric to Evaluate Security of Cache Architectures"
     authors="**P. Curlin**, T. Lehman"
     venue="CRA-WP Grad Cohort Workshop"
