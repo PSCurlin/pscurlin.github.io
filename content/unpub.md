@@ -26,7 +26,7 @@ layout: "pub-page"
 - {{< pubentry 
     title="Open-Source Cache Architectures in Chipyard "
     authors="**P. Curlin**, T. Lehman"
-    venue="Open-Source Computer Architecture Workshop"
+    venue="Open-Source Computer Architecture (OSCAR) Workshop in conjunction with the IEEE/ACM International Symposium on Computer Architecture (ISCA)"
     location="Raleigh, NC"
     date="Jun. 2026"
 >}}
