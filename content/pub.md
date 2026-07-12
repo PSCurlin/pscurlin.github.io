@@ -32,6 +32,7 @@ layout: "pub-page"
 {{< publinks
     paper="https://ieeexplore.ieee.org/abstract/document/11242098"
     code="https://zenodo.org/records/16877763"
+    slides="/pres/casm-pres-iiswc25.pdf"
 >}}
 {{< /pubentry >}}
 
